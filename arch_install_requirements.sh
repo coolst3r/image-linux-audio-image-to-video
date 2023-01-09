@@ -6,8 +6,17 @@ if ! command -v python3 &>/dev/null; then
     sudo pacman -S python
 fi
 
-# Check if GTK+ 3 is installed
-if ! pkg-config --exists gtk+-3.0; then
-    # Install GTK+ 3
-    sudo pacman -S gtk3
+# Check if pip is installed
+if ! command -v pip &>/dev/null; then
+    # Install pip
+    sudo pacman -S python-pip
+fi
+
+# Install the ffmpeg-python package
+pip install ffmpeg-python
+
+# Check if ffmpeg is installed
+if ! command -v ffmpeg &>/dev/null; then
+    # Install ffmpeg
+    sudo pacman -S ffmpeg
 fi
