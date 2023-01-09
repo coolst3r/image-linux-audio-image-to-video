@@ -18,3 +18,8 @@ sudo apt-get install python3 python3-gi gir1.2-gtk-3.0
 Once you have the dependencies installed, you can run the script by navigating to the directory where you saved the script and running the following command:
 
 python3 add_audio_gui.py
+
+To use this script, save it to a file (e.g. "install_requirements.sh"), make it executable using the chmod command, and then run it using ./install_requirements.sh.
+
+chmod +x install_requirements.sh
+./install_requirements.sh
